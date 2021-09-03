@@ -1,5 +1,6 @@
 
 public class Perspective {
+	//Sets 2D graphics perspective with respect to any set of 3 orthogonal 3D axes
 	
 	private static Vector3D viewPoint = new Vector3D(0, 0, 1);
 	private static Vector3D viewPoint2 = new Vector3D(1, 0, 0);

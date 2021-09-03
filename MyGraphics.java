@@ -31,6 +31,7 @@ public class MyGraphics extends JComponent {
 		for (int i = - width/2; i < cols; i++)
 			g.drawLine(i * rowWid, -height/2, i * rowWid, height/2);
 
+		//Draw each mass as oval
 		for (int i = 0; i < myObjects.length; i++) {
 			g.setColor(COLORS[i%COLORS.length]);
 			Vector3D canvasPos = Perspective.transform(myObjects[i].getPos().factor(Perspective.SCALE_FACTOR));

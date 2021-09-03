@@ -1,7 +1,8 @@
 
 
 public class Mass {
-
+	//Object for each mass in simulation
+	
 	private Vector3D myPosition;
 	private Vector3D myVelocity;
 	private Vector3D myAcceleration;

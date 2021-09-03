@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-//test
+//Main method here, runs program
 public class Command {
 
 	final static double time = 0.0005;
@@ -21,6 +21,7 @@ public class Command {
 
 		Mass[] objects = new Mass[numObjects];
 
+		//Query number and data of mass objects
 		for (int i = 0; i < numObjects; i++) {
 			System.out.print("Mass: ");
 			double mass = sc.nextDouble();
@@ -62,6 +63,7 @@ public class Command {
 		sc.close();
 
 
+		//Set graphics window
 		JFrame window = new JFrame();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setBounds(0, 0, 1200, 1200);
@@ -76,6 +78,7 @@ public class Command {
 		window2.getContentPane().add(new CentroidGraph(objects));
 		window2.setVisible(true);
 		
+		//Draw and update graphics
 		while(true) {
 			try {
 				window.getContentPane().add(new MyGraphics(objects));
@@ -91,6 +94,7 @@ public class Command {
 					}
 				}
 				
+				//Occasionally output to console position/velocity vectors for debugging
 				double rand = Math.random();
 				for (Mass object: objects) {
 					object.applyMvmt(time);
